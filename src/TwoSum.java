@@ -39,6 +39,27 @@ public class TwoSum {
         throw new IllegalArgumentException("No solution found");
     }
 
+    /*
+    Optimal solution:
+    public int[] twoSum(int[] nums, int target) {
+        //Time: O(n) -> just 1 for loop (if theres n numers ill potentially look each one once)
+        //Space O(n)
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i = 0; i < nums.length; i++){
+            int cur = nums[i];
+            //cur + x = target ---> x = target - cur
+            int x = target-cur;
+            if(map.containsKey(x)){
+                return new int[] {map.get(x), i};
+            }
+            map.put(cur,i);
+        }
+        return null;
+    }
+
+
+     */
+
     public static void main(String[] args) {
         TwoSum twoSum = new TwoSum();
         //Example 1
