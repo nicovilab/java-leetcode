@@ -48,7 +48,8 @@ public class PalindromeNumber {
         int inputNumber = x;
 
         while (x > 0) {
-            reverse = (reverse * 10) + (x % 10);
+            reverse = (reverse * 10) + (x % 10); // First iteration reverse (121 case)-> 0*10 + 121%10 = (0+1), Second iteration -> 1*10+12%10 = 10+2 = 12
+            // Third iteration -> 12*10+1%10 = 120+1 = 121
             x /= 10;
         }
         return reverse == inputNumber;
