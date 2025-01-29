@@ -37,7 +37,7 @@ public class ContainerWithMostWater {
         while(pointerA < pointerB){
             if(heigth[pointerA] < heigth[pointerB]){
                 // area = heigth * width (pointer b - pointer a) -> the width of the container is just the distance between both pointers
-                maxArea = Math.max(maxArea, heigth[pointerA] * (pointerB - pointerA));
+                maxArea = Math.max(maxArea, heigth[pointerA] * (pointerB - pointerA)); //for heigth we take the smallest one, otherwise the container may overflow
                 pointerA++;
             }else{
                     maxArea = Math.max(maxArea, heigth[pointerB] * (pointerB - pointerA));
